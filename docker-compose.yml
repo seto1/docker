@@ -6,16 +6,16 @@ services:
         build: "./"
         env_file: .env
         volumes:
-          - ${WWW_DIR}:/var/www/html
           - ./conf/apache.conf:/etc/httpd/conf.d/apache.conf
           - ./conf/vhosts.conf:/etc/httpd/conf.d/vhosts.conf
           - ./conf/ssmtp.conf:/etc/ssmtp/ssmtp.conf
           - ./conf/php.ini:/etc/php.ini
           - ./conf/my.cnf:/etc/my.cnf
           - ./conf/config.fish:/root/.config/fish/config.fish
+          - ${WWW_DIR}:/var/www/html
+          - ${SHARE_DIR}:/file
           - ./volumes/mysql:/var/lib/mysql # for mac
           # - cp56m-volume:/var/lib/mysql # for windows
-          - ${SHARE_DIR}:/file
         ports:
           - "8888:80"
 # volumes: # for windows

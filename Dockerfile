@@ -16,7 +16,9 @@ RUN wget https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_amd64.
 	&& tar xvzf peco_linux_amd64.tar.gz \
 	&& mv peco_linux_amd64/peco /usr/local/bin/ \
 	&& curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher \
-	&& su -c "fisher oh-my-fish/plugin-peco" -s /bin/fish
+	&& su -c "fisher oh-my-fish/plugin-peco" -s /bin/fish \
+	&& su -c "fisher 0rax/fish-bd" -s /bin/fish \
+	&& su -c "fisher install z" -s /bin/fish
 
 # composer
 RUN curl -sS https://getcomposer.org/installer | php \
