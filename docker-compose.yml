@@ -12,11 +12,11 @@ services:
           - ./conf/php.ini:/etc/php.ini
           - ./conf/my.cnf:/etc/my.cnf
           - ./conf/config.fish:/root/.config/fish/config.fish
-          - ${WWW_DIR}:/var/www/html
-          - ${SHARE_DIR}:/file
+          - ${WWW_DIR}:/var/www/html:cached
+          - ${SHARE_DIR}:/file:cached
           - ./volumes/mysql:/var/lib/mysql # for mac
           # - cp56m-volume:/var/lib/mysql # for windows
         ports:
-          - "8888:80"
+          - "8889:80"
 # volumes: # for windows
 #     cp56m-volume:
