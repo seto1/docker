@@ -11,11 +11,4 @@ WWW_DIR=</var/www/htmlにマウントするホストのディレクトリパス>
 SHARE_DIR=</fileにマウントするホストのディレクトリパス>
 ```
 
-2. confフォルダにvhosts.confを作成して以下の記述を行う  
-サブドメインを使用したい場合はこのファイルに追記する
-```
-<VirtualHost *:80>
-    ServerName localhost
-    DocumentRoot "/var/www/html"
-</VirtualHost>
-```
+2. confフォルダにvhosts.confとssmtp.confを作成する

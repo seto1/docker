@@ -1,3 +1,4 @@
 .env
 volumes/
 vhosts.conf
+ssmtp.conf
