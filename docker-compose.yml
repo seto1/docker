@@ -18,6 +18,7 @@ services:
           # - cp56m-volume:/var/lib/mysql # for windows
         ports:
           - "8889:80"
+          - "13306:3306"
         restart: always
 # volumes: # for windows
 #     cp56m-volume:

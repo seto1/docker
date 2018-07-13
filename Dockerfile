@@ -29,5 +29,7 @@ RUN mkdir /bootstrap
 COPY start.sh /bootstrap
 RUN rm /etc/php.d/15-xdebug.ini
 
+WORKDIR /var/www/html
+
 RUN chmod +x /bootstrap/start.sh
 ENTRYPOINT ["/bootstrap/start.sh"]
